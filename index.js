@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (filteredArray.length === 0) {
+        next.style.display = "none";
         emptyContainer.style.display = "block";
         paginationContainer.style.display = "none";
       } else {
@@ -184,25 +185,25 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   const nextPage = () => {
     if (currentPage < totalPages) {
-      currentPage = currentPage + 1;
-      previous.style.display = "block";
-      userProjectsInfo();
+        currentPage = currentPage + 1;
+        previous.style.display = "block";
+        userProjectsInfo();
     }
-    if (currentPage == totalPages) {
-      next.style.display = "none";
+    if (currentPage === totalPages) {
+        next.style.display = "none";
     }
-  };
+};
   const prevPage = () => {
     if (currentPage > 1) {
-      currentPage = currentPage - 1;
-      next.style.display = "block";
-      previous.style.display = "block";
-      userProjectsInfo();
+        currentPage = currentPage - 1;
+        next.style.display = "block";
+        previous.style.display = "block";
+        userProjectsInfo();
     }
-    if (currentPage == "1") {
-      previous.style.display = "none";
+    if (currentPage === 1) {
+        previous.style.display = "none";
     }
-  };
+};
 
   const searchBtn = document.querySelector(".searchBtn");
   searchBtn.addEventListener("click", () => {
