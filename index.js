@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
     </div>
     </div>`;
-      //Here we are appending the userData into the respected container.
+
       const profileBioContainer = document.createElement("div");
       profileBioContainer.innerHTML = Html;
       const profileContainer = document.querySelector(".profile-container");
