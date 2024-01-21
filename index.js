@@ -6,10 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainContainer = document.querySelector(".main-container");
   const emptyContainer = document.querySelector(".emptyProjectContainer");
   const paginationContainer = document.querySelector(".pages-container");
+  const next = document.querySelector("#nextContainer");
 
   const handleSpinner = (show) => {
     spinnerContainer.style.display = show ? "block" : "none";
     mainContainer.style.display = show ? "none" : "block";
+      next.style.display = "none"; 
   };
 
   const userData = async () => {
@@ -65,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const totalItemsPerPage = Math.min(itemsPerPage, maxPerPage);
 
   const userProjectsInfo = async () => {
+
     try {
       const projectContainer = document.querySelector(".project-container");
       projectContainer.innerHTML = "";
@@ -76,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       const dataInfo = await fetchedInfo.json();
       const duplicateArray = dataInfo;
-      //Implemented dynamic Search Bar.(Requirement)
       const searchInput = document.querySelector(".searchInput");
       const filteredArray = duplicateArray.filter((elem) => {
         return elem.name
@@ -85,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (filteredArray.length === 0) {
-        next.style.display = "none";
         emptyContainer.style.display = "block";
         paginationContainer.style.display = "none";
       } else {
@@ -158,7 +159,6 @@ document.addEventListener("DOMContentLoaded", () => {
       element.addEventListener("click", () => {
         currentPage = parseInt(element.textContent);
         previous.style.display = "block";
-        //Making sure all edge cases of pagination work.
         if (currentPage == totalPages) {
           next.style.display = "none";
         } else {
@@ -179,7 +179,6 @@ document.addEventListener("DOMContentLoaded", () => {
   previous.addEventListener("click", () => {
     prevPage();
   });
-  const next = document.querySelector("#nextContainer");
   next.addEventListener("click", () => {
     nextPage();
   });
