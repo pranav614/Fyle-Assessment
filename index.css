@@ -1,0 +1,282 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.sub-profile-container2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1vw;
+  margin-top: 10px;
+}
+.sub-profile-container2 a strong {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+.sub-profile-container2 a {
+  color: black;
+}
+.profile-img {
+  height: 200px;
+  width: 250px;
+  border: 1px solid rgb(135, 134, 134);
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5vw;
+}
+img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.profile-container {
+  padding: 20px 5vw;
+  display: flex;
+}
+.candidate-name {
+  font-family: Helvetica;
+  font-size: 32px;
+}
+.candidate-location {
+  display: flex;
+}
+.profileContainer {
+  display: flex;
+  gap: 3vw;
+}
+.candidate-bio {
+  font-weight: 300;
+}
+.user-link-container a {
+  color: black;
+}
+
+.project-container {
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.language-text {
+  background-color: #428aca;
+  width: fit-content;
+  padding: 1px 6px;
+  border-radius: 5px;
+  color: white;
+}
+.languages-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+.pages-container ul {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.language-text {
+  font-size: 14px;
+}
+.pages-list {
+  display: flex;
+}
+.per-page {
+  color: #0b58ca;
+  padding: 3px 12px;
+  border: 1px solid #dee2e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+}
+#prevContainer {
+  display: none;
+}
+.projectTitle {
+  color: #3483c8;
+}
+.project-description {
+  font-size: 13px;
+}
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 999;
+}
+
+.card-details {
+  border: 1px solid #d2d2d2;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 30rem;
+}
+
+@media (max-width: 1192px) {
+  .card-details {
+    width: 25rem;
+  }
+}
+@media (max-width: 959px) {
+  .card-details {
+    width: 20rem;
+  }
+}
+@media (max-width: 959px) {
+  .card-details {
+    width: 25rem;
+  }
+  .project-container {
+    margin: 0 auto;
+
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+}
+.profile-img {
+  height: 200px;
+  width: 250px;
+  border: 1px solid rgb(135, 134, 134);
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5vw;
+}
+@media (max-width: 650px) {
+  .profile-img {
+    height: 150px;
+    width: 200px;
+    border: 1px solid rgb(135, 134, 134);
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vw;
+  }
+  .candidate-bio {
+    font-size: 12px;
+  }
+  .candidate-name {
+    font-size: 26px;
+  }
+  .twitterLink {
+    font-size: 12px;
+  }
+  .candidate-location {
+    font-size: 12px;
+  }
+}
+@media (max-width: 504px) {
+  .profile-img {
+    height: 120px;
+    width: 150px;
+    border: 1px solid rgb(135, 134, 134);
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vw;
+  }
+  .candidate-bio {
+    font-size: 12px;
+  }
+  .candidate-name {
+    font-size: 26px;
+  }
+  .twitterLink {
+    font-size: 12px;
+  }
+  .candidate-location {
+    font-size: 12px;
+  }
+  .candidate-location p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .sub-profile-container2 {
+    margin: 0;
+  }
+}
+@media (max-width: 447px) {
+  .profile-img {
+    height: 120px;
+    width: 150px;
+    border: 1px solid rgb(135, 134, 134);
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vw;
+  }
+  .candidate-bio {
+    font-size: 10px;
+    margin: 0;
+  }
+  .candidate-name {
+    font-size: 22px;
+    margin: 0;
+  }
+  .twitterLink {
+    font-size: 12px;
+  }
+  .candidate-location {
+    font-size: 10px;
+  }
+  .candidate-location p {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sub-profile-container2 {
+    gap: 10px;
+  }
+}
+
+input {
+  padding: 6px 6px;
+}
+.search-container {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+
+.emptyProject {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 20px;
+}
+.emptyProjectContainer {
+  display: none;
+}
